@@ -25,6 +25,9 @@ namespace BulkyWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
+            if (obj.Name == obj.DisplayOrder.ToString()) {
+                ModelState.AddModelError("Name", "Name can't be equal to Display Order.");
+            }
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
