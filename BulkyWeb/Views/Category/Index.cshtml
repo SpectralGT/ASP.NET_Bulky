@@ -12,23 +12,36 @@
         </div>
     </div>
 
-<table class="table table-bordered table-striped">
-    
-    <thead>
-        
-    <tr>
-        <th>Name</th>
-        <th>Display Order</th>
-    </tr>
-    </thead>
+    <table class="table table-bordered table-striped">
 
-    <tbody>
-    @foreach(var obj in Model.OrderBy(u=>u.DisplayOrder)){
-    <tr>
-        <td>@obj.Name</td>
-        <td>@obj.DisplayOrder</td>
-    </tr>
-    }    
-    </tbody>
-</table>
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Display Order</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var obj in Model.OrderBy(u => u.DisplayOrder))
+            {
+                <tr>
+                    <td>@obj.Name</td>
+                    <td>@obj.DisplayOrder</td>
+                    <td>
+
+                        <div class="float-end" role="group">
+                            <a asp-controller="Category" asp-action="Edit" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                            <a asp-controller="Category" asp-action="Delete" class="btn btn-outline-danger mx-2">
+                                <i class="bi bi-trash-fill"></i> Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
