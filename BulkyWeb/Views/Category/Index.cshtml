@@ -32,7 +32,7 @@
                     <td>
 
                         <div class="float-end" role="group">
-                            <a asp-controller="Category" asp-action="Edit" class="btn btn-primary mx-2">
+                            <a asp-controller="Category" asp-route-id="@obj.Id" asp-action="Edit" class="btn btn-primary mx-2">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
                             <a asp-controller="Category" asp-action="Delete" class="btn btn-outline-danger mx-2">
