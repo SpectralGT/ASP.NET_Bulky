@@ -35,7 +35,9 @@ namespace Bulky.DataAccess.Repository
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            IQueryable<T> query = dbSet;
+            return query.ToList();
+
         }
 
         public void Remove(T entity)
