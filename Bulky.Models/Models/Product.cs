@@ -39,8 +39,10 @@ namespace Bulky.Models.Models
         [Range(1, 1000)]
         public double Price100 { get; set; }
 
-        public int? CatergoryId { get; set; }
+        public int CatergoryId { get; set; }
         [ForeignKey("CategoryId")]
-        public Category Category {  get; set; }
+        public Category? Category {  get; set; }
+
+        public string ImageURL { get; set; }
     }
 }
