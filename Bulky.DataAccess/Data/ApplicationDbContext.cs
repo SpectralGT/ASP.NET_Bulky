@@ -32,7 +32,7 @@ namespace Bulky.DataAccess.Data
                     Price = 10,
                     Price50 = 50,
                     Price100 = 100,
-                    CatergoryId = 0,
+                    CategoryId = 0,
                     ImageURL = ""
                 });
         }

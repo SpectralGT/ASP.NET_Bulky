@@ -48,6 +48,13 @@
             <span asp-validation-for="Price100" class="text-danger"></span>
         </div>
 
+        <div class="mb-3 row p-1">
+            <select asp-for="CategoryId" asp-items="ViewBag.CategoryList" class="form-select p-0">
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <label asp-for="CategoryId" class="form-control" />
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
 
         <div class="row">
             <div class="col-6 col-md-3">
