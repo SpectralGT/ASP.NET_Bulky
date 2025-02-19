@@ -6,7 +6,7 @@
             <h2 class="text-primary">Product List</h2>
         </div>
         <div class="col-6 text-end">
-            <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
                 <i class="bi bi-plus-circle"></i> Add New Product
             </a>
         </div>
@@ -47,7 +47,7 @@
                     <td>
 
                         <div class="float-end" role="group">
-                            <a asp-controller="Product" asp-route-id="@obj.Id" asp-action="Edit" class="btn btn-primary mx-2">
+                            <a asp-controller="Product" asp-route-id="@obj.Id" asp-action="Upsert" class="btn btn-primary mx-2">
                                 <i class="bi bi-pencil-square"></i> Edit
                             </a>
                             <a asp-controller="Product" asp-route-id="@obj.Id" asp-action="Delete" class="btn btn-outline-danger mx-2">

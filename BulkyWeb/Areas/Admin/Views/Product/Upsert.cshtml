@@ -1,9 +1,10 @@
 ﻿@model ProductVM
 
 <form method="post" enctype="multipart/form-data">
+    <input asp-for="Product.Id" hidden/>
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary">Create Product</h2>
+            <h2 class="text-primary">Create/Update Product</h2>
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
@@ -69,7 +70,7 @@
 
         <div class="row">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-primary form-control" style="width:150px"> Create</button>
+                <button type="submit" class="btn btn-primary form-control" style="width:150px">Create/Update</button>
 
             </div>
             <div class="col-6 col-md-3">
