@@ -1,7 +1,7 @@
 ﻿@model ProductVM
 
 <form method="post" enctype="multipart/form-data">
-    <input asp-for="Product.Id" hidden/>
+    <input asp-for="Product.Id" hidden />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary">Create/Update Product</h2>
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3 row p-1">
             <label asp-for="Product.Description" class="p-0"></label>
-            <input asp-for="Product.Description" class="form-control" />
+            <textarea asp-for="Product.Description" class="form-control" ></textarea>
             <span asp-validation-for="Product.Description" class="text-danger"></span>
         </div>
 
@@ -83,7 +83,13 @@
     </div>
 </form>
 
-@section Scripts{
+@section Scripts {
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+    <script>
+        new FroalaEditor('textarea');
+    </script>
+
     @{
         <partial name="_ValidationScriptsPartial" />
     }
